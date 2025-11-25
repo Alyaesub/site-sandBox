@@ -1,0 +1,271 @@
+/* Styles autonomes dans l'esprit de ton portfolio : fond sombre, cartes glassy, spacing large */
+
+:root {
+  --color-bg: #0b1221;
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-surface-strong: rgba(255, 255, 255, 0.08);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-text: #e9edf5;
+  --color-muted: rgba(255, 255, 255, 0.7);
+  --color-accent: #22d3ee;
+  --color-primary: #2563eb;
+  --max-width: 1200px;
+  --radius-lg: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.12), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(34, 211, 238, 0.16), transparent 30%),
+    #0b1221;
+  color: var(--color-text);
+  line-height: 1.6;
+  padding: 0 1rem 3rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+body > header.section-display {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.section-display {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  display: grid;
+  gap: 2.4rem;
+  background: rgba(17, 24, 39, 0.65);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 0.35);
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 760px;
+}
+
+.section-heading .eyebrow {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.section-heading h1,
+.section-heading h2 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.section-heading p {
+  font-size: 1.05rem;
+}
+
+.sandbox-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.filter-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.filter-btn {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+  border-color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.26);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.filter-btn.active {
+  border-color: rgba(6, 182, 212, 0.8);
+  color: var(--color-accent);
+  box-shadow: 0 12px 28px rgba(6, 182, 212, 0.3);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.16), rgba(6, 182, 212, 0.18));
+}
+
+.resource-grid {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.resource-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.28);
+  transition: transform 0.35s ease, opacity 0.35s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(16px);
+  will-change: transform, opacity;
+}
+
+.resource-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.resource-card:hover,
+.resource-card.enhanced-hover:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(6, 182, 212, 0.45);
+  background: var(--color-surface-strong);
+  box-shadow: 0 18px 42px rgba(37, 99, 235, 0.32), 0 10px 26px rgba(6, 182, 212, 0.22);
+}
+
+.resource-card h4 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.resource-card p {
+  color: var(--color-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.resource-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.resource-link i {
+  transition: transform 0.25s ease;
+}
+
+.resource-card:hover .resource-link i {
+  transform: translateX(6px);
+}
+
+.resource-card.hidden-card {
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    padding: 0 1rem 2rem;
+  }
+
+  .section-display {
+    padding: 3rem 1.25rem;
+  }
+
+  .filter-menu {
+    justify-content: flex-start;
+  }
+}
+
+body[data-theme="light"] {
+  --color-bg: #f5f7fb;
+  --color-surface: rgba(15, 23, 42, 0.04);
+  --color-surface-strong: rgba(15, 23, 42, 0.08);
+  --color-border: rgba(15, 23, 42, 0.12);
+  --color-text: #0f172a;
+  --color-muted: rgba(15, 23, 42, 0.7);
+  background: radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.08), transparent 32%),
+    radial-gradient(circle at 90% 0%, rgba(34, 211, 238, 0.1), transparent 28%),
+    #f5f7fb;
+  color: var(--color-text);
+}
+
+body[data-theme="light"] .section-display {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+}
+
+body[data-theme="light"] .filter-btn {
+  border-color: rgba(15, 23, 42, 0.08);
+  background: rgba(15, 23, 42, 0.04);
+}
+
+body[data-theme="light"] .filter-btn:hover,
+body[data-theme="light"] .filter-btn:focus-visible {
+  background: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
+}
+
+body[data-theme="light"] .filter-btn.active {
+  box-shadow: 0 12px 28px rgba(6, 182, 212, 0.22);
+}

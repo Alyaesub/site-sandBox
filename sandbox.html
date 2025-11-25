@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandbox – Musee de projets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/sandbox.css">
+</head>
+<body>
+  <header class="section-display">
+    <div class="section-heading">
+      <span class="eyebrow">Sandbox</span>
+      <h1>Musee de projets</h1>
+      <p>Un espace pour reunir mes premiers essais, mes stacks favoris et mes experimentations en cours. Copiez/collez une card, changez le contenu : c'est pret.</p>
+    </div>
+    <div class="filter-menu" role="group" aria-label="Filtrer les projets par technologie">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="debut">Debuts</button>
+      <button class="filter-btn" data-filter="javascript">JavaScript</button>
+      <button class="filter-btn" data-filter="php">PHP</button>
+      <button class="filter-btn" data-filter="web3">Web3</button>
+    </div>
+  </header>
+
+  <main class="sandbox-content">
+    <section class="section-display" id="premiers-projets">
+      <div class="section-heading">
+        <span class="eyebrow">Archives</span>
+        <h2>Mes premiers projets</h2>
+        <p>Les bases posees en HTML/CSS et mes premiers scripts JS.</p>
+      </div>
+      <div class="resource-grid">
+        <a class="resource-card" data-tech="debut,html,css" href="#" target="_blank" rel="noopener">
+          <h4>Landing page statique</h4>
+          <p>Premiere maquette responsive avec sections hero, features et CTA.</p>
+          <div class="experience-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">UI</span>
+          </div>
+          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="resource-card" data-tech="debut,javascript" href="#" target="_blank" rel="noopener">
+          <h4>Quiz interactif</h4>
+          <p>Logique JS vanilla pour scorer, afficher les reponses et proposer un retry.</p>
+          <div class="experience-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">DOM</span>
+            <span class="tag">UI</span>
+          </div>
+          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="resource-card" data-tech="debut,php" href="#" target="_blank" rel="noopener">
+          <h4>Blog minimal</h4>
+          <p>Listing d'articles depuis un tableau PHP, pagination simple et liens dedies.</p>
+          <div class="experience-tags">
+            <span class="tag">PHP</span>
+            <span class="tag">Routing</span>
+            <span class="tag">HTML</span>
+          </div>
+          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section-display" id="par-techno">
+      <div class="section-heading">
+        <span class="eyebrow">Stacks</span>
+        <h2>Par techno</h2>
+        <p>Une vue rapide par langage ou framework utilise.</p>
+      </div>
+      <div class="resource-grid">
+        <a class="resource-card" data-tech="javascript" href="#" target="_blank" rel="noopener">
+          <h4>Dashboard temps reel</h4>
+          <p>Graphiques en direct avec WebSockets et interactions drag & drop.</p>
+          <div class="experience-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">WebSocket</span>
+            <span class="tag">Charts</span>
+          </div>
+          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="resource-card" data-tech="php" href="#" target="_blank" rel="noopener">
+          <h4>API REST artisanale</h4>
+          <p>Routing custom, middleware simple, reponses JSON et authentification basique.</p>
+          <div class="experience-tags">
+            <span class="tag">PHP</span>
+            <span class="tag">API</span>
+            <span class="tag">JSON</span>
+          </div>
+          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="resource-card" data-tech="web3,javascript" href="#" target="_blank" rel="noopener">
+          <h4>Mint d'assets</h4>
+          <p>Connexion wallet, signature et interaction avec un smart contract ERC-721.</p>
+          <div class="experience-tags">
+            <span class="tag">Web3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Smart Contract</span>
+          </div>
+          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section-display" id="experimentations">
+      <div class="section-heading">
+        <span class="eyebrow">Lab</span>
+        <h2>Experimentations</h2>
+        <p>Prototypes, POC et micro-interactions a tester.</p>
+      </div>
+      <div class="resource-grid">
+        <a class="resource-card" data-tech="javascript" href="#" target="_blank" rel="noopener">
+          <h4>Generateur d'animations</h4>
+          <p>Timeline animee avec controles temps reel pour tester les easings.</p>
+          <div class="experience-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Animations</span>
+            <span class="tag">UI</span>
+          </div>
+          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="resource-card" data-tech="web3" href="#" target="_blank" rel="noopener">
+          <h4>Dashboard on-chain</h4>
+          <p>Lecture de state on-chain, rafraichissement en direct et graphiques legers.</p>
+          <div class="experience-tags">
+            <span class="tag">Web3</span>
+            <span class="tag">ETH</span>
+            <span class="tag">Live</span>
+          </div>
+          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="resource-card" data-tech="javascript" href="#" target="_blank" rel="noopener">
+          <h4>Micro-interactions UI</h4>
+          <p>Bibliotheque de hover, loaders et feedback instantanes pour UI modernes.</p>
+          <div class="experience-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">UI</span>
+            <span class="tag">Motion</span>
+          </div>
+          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/sandbox.js" defer></script>
+</body>
+</html>

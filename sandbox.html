@@ -3,150 +3,383 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sandbox – Musee de projets</title>
+  <title>Sandbox – Musée de projets</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="styles/sandbox.css">
 </head>
 <body>
   <header class="section-display">
     <div class="section-heading">
       <span class="eyebrow">Sandbox</span>
-      <h1>Musee de projets</h1>
-      <p>Un espace pour reunir mes premiers essais, mes stacks favoris et mes experimentations en cours. Copiez/collez une card, changez le contenu : c'est pret.</p>
+      <h1>Musée de projets</h1>
+      <p>
+        Un espace pour réunir mes premiers essais, mes stacks favoris et mes expérimentations.
+        Chaque card représente un projet : stack, contexte technique et lien quand la démo est en ligne.
+      </p>
     </div>
+
     <div class="filter-menu" role="group" aria-label="Filtrer les projets par technologie">
       <button class="filter-btn active" data-filter="all">Tous</button>
-      <button class="filter-btn" data-filter="debut">Debuts</button>
+      <button class="filter-btn" data-filter="debut">Débuts</button>
       <button class="filter-btn" data-filter="javascript">JavaScript</button>
+      <button class="filter-btn" data-filter="typescript">TypeScript</button>
+      <button class="filter-btn" data-filter="react">React</button>
+      <button class="filter-btn" data-filter="node">Node.js</button>
+      <button class="filter-btn" data-filter="express">Express</button>
       <button class="filter-btn" data-filter="php">PHP</button>
       <button class="filter-btn" data-filter="web3">Web3</button>
     </div>
   </header>
 
   <main class="sandbox-content">
+
+    <!-- SECTION 1 – PREMIERS PAS & FONDATIONS -->
     <section class="section-display" id="premiers-projets">
       <div class="section-heading">
         <span class="eyebrow">Archives</span>
-        <h2>Mes premiers projets</h2>
-        <p>Les bases posees en HTML/CSS et mes premiers scripts JS.</p>
+        <h2>Premiers pas & fondations</h2>
+        <p>Les bases posées en HTML/CSS, mes premières intégrations et mini-jeux JavaScript.</p>
       </div>
+
       <div class="resource-grid">
-        <a class="resource-card" data-tech="debut,html,css" href="#" target="_blank" rel="noopener">
-          <h4>Landing page statique</h4>
-          <p>Premiere maquette responsive avec sections hero, features et CTA.</p>
+
+        <!-- Clone Station F / premières intégrations -->
+        <article class="resource-card" data-tech="debut,html,css">
+          <h4>Recode Station F</h4>
+          <p>
+            Reproduction d’une landing page existante pour travailler la structure HTML,
+            la grille CSS et la responsivité sans framework.
+          </p>
           <div class="experience-tags">
             <span class="tag">HTML</span>
             <span class="tag">CSS</span>
-            <span class="tag">UI</span>
+            <span class="tag">Responsive</span>
           </div>
-          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-        </a>
-        <a class="resource-card" data-tech="debut,javascript" href="#" target="_blank" rel="noopener">
-          <h4>Quiz interactif</h4>
-          <p>Logique JS vanilla pour scorer, afficher les reponses et proposer un retry.</p>
+          <span class="resource-link">🔒 Local only – intégration d’entraînement</span>
+        </article>
+
+        <!-- 1er exercice -->
+        <article class="resource-card" data-tech="debut,html,css">
+          <h4>Premier exercice d’intégration</h4>
+          <p>
+            Mise en page simple avec header, sections, footer et premiers principes de hiérarchie
+            visuelle (titres, paragraphes, boutons).
+          </p>
+          <div class="experience-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Structure</span>
+          </div>
+          <span class="resource-link">🔒 Local only – exercice de base</span>
+        </article>
+
+        <!-- Jeu de dés -->
+        <a class="resource-card" data-tech="debut,javascript,html,css"
+          href="https://jeux-de-des.sites-alya.fr/" target="_blank" rel="noopener">
+          <h4>🎲 Jeu de dés</h4>
+          <p>
+            Mini-jeu en JavaScript vanilla : gestion d’état, tour par tour, conditions de victoire
+            et interactions DOM pour l’affichage en temps réel.
+          </p>
           <div class="experience-tags">
             <span class="tag">JavaScript</span>
             <span class="tag">DOM</span>
+            <span class="tag">Events</span>
+          </div>
+          <span class="resource-link">Voir la démo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <!-- Mini-jeux JS (devine nombre, pile ou face…) -->
+        <article class="resource-card" data-tech="debut,javascript">
+          <h4>Mini-jeux JavaScript</h4>
+          <p>
+            Série de petits jeux (deviner un nombre, pile ou face, etc.) pour travailler la logique,
+            les conditions, les boucles et le feedback utilisateur.
+          </p>
+          <div class="experience-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Scoring</span>
             <span class="tag">UI</span>
           </div>
-          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-        </a>
-        <a class="resource-card" data-tech="debut,php" href="#" target="_blank" rel="noopener">
-          <h4>Blog minimal</h4>
-          <p>Listing d'articles depuis un tableau PHP, pagination simple et liens dedies.</p>
-          <div class="experience-tags">
-            <span class="tag">PHP</span>
-            <span class="tag">Routing</span>
-            <span class="tag">HTML</span>
-          </div>
-          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-        </a>
+          <span class="resource-link">🔒 Local only – exercices logiques</span>
+        </article>
       </div>
     </section>
 
+    <!-- SECTION 2 – COMPÉTENCES MISES EN PRATIQUE -->
     <section class="section-display" id="par-techno">
       <div class="section-heading">
         <span class="eyebrow">Stacks</span>
-        <h2>Par techno</h2>
-        <p>Une vue rapide par langage ou framework utilise.</p>
+        <h2>Compétences mises en pratique</h2>
+        <p>Projets structurés qui illustrent mon utilisation des stacks modernes côté front et back.</p>
       </div>
       <div class="resource-grid">
-        <a class="resource-card" data-tech="javascript" href="#" target="_blank" rel="noopener">
-          <h4>Dashboard temps reel</h4>
-          <p>Graphiques en direct avec WebSockets et interactions drag & drop.</p>
+
+        <!-- Landing Alpaguide – PROJET PHARE -->
+        <a class="resource-card" data-tech="javascript,seo"
+          href="#" target="_blank" rel="noopener">
+          <h4>⭐ Alpaguide – Landing page SaaS</h4>
+          <p>
+            Landing page orientée conversion : storytelling, sections marketing, formulaires CTA/bêta,
+            SEO travaillé et intégration d’un système de mailing côté back.
+          </p>
           <div class="experience-tags">
+            <span class="tag">HTML/CSS</span>
             <span class="tag">JavaScript</span>
-            <span class="tag">WebSocket</span>
-            <span class="tag">Charts</span>
+            <span class="tag">SEO</span>
           </div>
-          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          <span class="resource-link">Voir la démo (deploiment prévue fin 2026) <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
         </a>
-        <a class="resource-card" data-tech="php" href="#" target="_blank" rel="noopener">
-          <h4>API REST artisanale</h4>
-          <p>Routing custom, middleware simple, reponses JSON et authentification basique.</p>
+
+        <!-- NFT Gallery – PROJET PHARE -->
+        <a class="resource-card" data-tech="typescript,javascript,web3"
+          href="https://nft-collection-1-liart.vercel.app/" target="_blank" rel="noopener">
+          <h4>⭐ NFT Collection – Starter Pack</h4>
+          <p>
+            Galerie NFT modulaire en TypeScript : chargement dynamique des métadonnées JSON,
+            affichage responsive, préparation à l’intégration de smart contracts et connexion wallet.
+          </p>
+          <div class="experience-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Web3</span>
+            <span class="tag">CI/CD</span>
+          </div>
+          <span class="resource-link">Voir la démo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <!-- EcoRide – PROJET PHARE -->
+        <a class="resource-card" data-tech="php,javascript,sql"
+          href="http://ecoride.sites-alya.fr/" target="_blank" rel="noopener">
+          <h4>⭐ EcoRide – Covoiturage écoresponsable</h4>
+          <p>
+            Plateforme full-stack : gestion des comptes, covoiturages, crédits, avis (SQL + JSON),
+            dashboards multi-rôles (utilisateur, employé, admin) et système d’emails automatisés.
+          </p>
           <div class="experience-tags">
             <span class="tag">PHP</span>
-            <span class="tag">API</span>
-            <span class="tag">JSON</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">NoSQL</span>
           </div>
-          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          <span class="resource-link">Voir la démo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
         </a>
-        <a class="resource-card" data-tech="web3,javascript" href="#" target="_blank" rel="noopener">
-          <h4>Mint d'assets</h4>
-          <p>Connexion wallet, signature et interaction avec un smart contract ERC-721.</p>
+
+        <!-- FC Provence -->
+        <article class="resource-card" data-tech="react,typescript,node,express,sql">
+          <h4>FC Provence – Site de club</h4>
+          <p>
+            Application full-stack moderne (React + Node/Express + SQL) pour gérer équipes, matchs,
+            joueurs et back-office administrateur avec API REST structurée.
+          </p>
+          <div class="experience-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">SQL</span>
+          </div>
+          <span class="resource-link">🚧 En cours – déploiement prévu</span>
+        </article>
+
+        <a class="resource-card"
+          data-tech="web3,solidity,typescript"
+          href="#"
+          target="_blank"
+          rel="noopener">
+          <h4>Starter Kits Web3</h4>
+          <p>
+            Création de bases techniques pour accélérer le dev Web3 : architecture
+            claire front + smart contracts, intégration wallet, gestion des
+            interactions on-chain, et environnement de test Hardhat.
+          </p>
+          <div class="experience-tags">
+            <span class="tag">Solidity</span>
+            <span class="tag">Hardhat</span>
+            <span class="tag">Wallet</span>
+          </div>
+          <span class="resource-link">
+            Coming soon <i class="fa-solid fa-hourglass-half"></i>
+          </span>
+        </a>
+
+        <a class="resource-card" 
+          data-tech="web3,javascript,typescript,opensource"
+          href="https://github.com/Alyaesub" 
+          target="_blank" 
+          rel="noopener">
+          <h4>Contributions open source Web3</h4>
+          <p>
+            Participation à de petits projets Web3 open source : correction de bugs,
+            amélioration de la documentation, tests de starter kits Solidity et
+            intégration front pour des DApps en cours de développement.
+          </p>
           <div class="experience-tags">
             <span class="tag">Web3</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Smart Contract</span>
+            <span class="tag">Open source</span>
+            <span class="tag">Solidity / TS</span>
           </div>
-          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          <span class="resource-link">
+            Voir mes contributions <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
         </a>
+
+        <!-- TrackBuild -->
+        <a class="resource-card" data-tech="typescript,javascript"
+          href="https://trackbuild.sites-alya.fr/" target="_blank" rel="noopener">
+          <h4>TrackBuild – Timer multi-projets</h4>
+          <p>
+            Application front en TypeScript pour suivre le temps passé par projet : gestion des sessions,
+            historique, calculs automatiques et persistance via LocalStorage.
+          </p>
+          <div class="experience-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">LocalStorage</span>
+            <span class="tag">UI</span>
+          </div>
+          <span class="resource-link">Voir la démo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <!-- Blog Web3 -->
+        <a class="resource-card" data-tech="php,sql"
+          href="http://blogweb3.sites-alya.fr/" target="_blank" rel="noopener">
+          <h4>Blog Web3 – CMS maison</h4>
+          <p>
+            Blog complet avec back-office : CRUD articles, gestion des catégories,
+            authentification et séparation claire entre logique métier et vues.
+          </p>
+          <div class="experience-tags">
+            <span class="tag">PHP</span>
+            <span class="tag">SQL</span>
+            <span class="tag">CRUD</span>
+          </div>
+          <span class="resource-link">Voir la démo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <!-- Messagerie -->
+        <a class="resource-card" data-tech="php,sql,javascript"
+          href="http://messagerie.sites-alya.fr/" target="_blank" rel="noopener">
+          <h4>Messagerie privée</h4>
+          <p>
+            Application de messagerie multi-utilisateurs : architecture MVC PHP,
+            requêtes asynchrones avec Fetch, rafraîchissement des conversations et gestion des comptes.
+          </p>
+          <div class="experience-tags">
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Fetch API</span>
+          </div>
+          <span class="resource-link">Voir la démo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <!-- Code&Co Solutions -->
+        <article class="resource-card" data-tech="debut,html,css,javascript">
+          <h4>Code &amp; Co Solutions – Vitrine</h4>
+          <p>
+            Première version du site vitrine pour mon activité freelance : positionnement,
+            présentation des services et mise en place d’une base de design system.
+          </p>
+          <div class="experience-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Branding</span>
+          </div>
+          <span class="resource-link">🔒 Local only – version de travail</span>
+        </article>
+
       </div>
     </section>
 
+    <!-- SECTION 3 – EXPÉRIMENTATIONS & POC -->
     <section class="section-display" id="experimentations">
       <div class="section-heading">
         <span class="eyebrow">Lab</span>
-        <h2>Experimentations</h2>
-        <p>Prototypes, POC et micro-interactions a tester.</p>
+        <h2>Expérimentations & Proof of Concept</h2>
+        <p>Prototypes, sandboxes Node.js et exercices TypeScript/JavaScript pour monter en compétences.</p>
       </div>
+
       <div class="resource-grid">
-        <a class="resource-card" data-tech="javascript" href="#" target="_blank" rel="noopener">
-          <h4>Generateur d'animations</h4>
-          <p>Timeline animee avec controles temps reel pour tester les easings.</p>
+
+        <!-- RPG Combat -->
+        <article class="resource-card" data-tech="typescript,node,javascript">
+          <h4>Combat RPG – moteur de jeu TypeScript</h4>
+          <p>
+            Prototype de jeu au tour par tour : classes pour les personnages,
+            gestion des points de vie, attaques, coups critiques et logs de combat.
+          </p>
+          <div class="experience-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Game Logic</span>
+          </div>
+          <span class="resource-link">🔒 Local only – POC TypeScript</span>
+        </article>
+
+        <!-- Node vanilla sandbox -->
+        <article class="resource-card" data-tech="node,javascript">
+          <h4>Sandbox Node.js vanilla</h4>
+          <p>
+            Environnement d’expérimentation avec les modules natifs : fs, path, http, events.
+            Création de petits serveurs, gestion de fichiers et routing sans framework.
+          </p>
+          <div class="experience-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">fs/http</span>
+            <span class="tag">CLI</span>
+          </div>
+          <span class="resource-link">🔒 Local only – tests Node natif</span>
+        </article>
+
+        <!-- Node + Express playground -->
+        <article class="resource-card" data-tech="node,express,javascript">
+          <h4>Node Playground – Express</h4>
+          <p>
+            Sandbox pour tester des APIs Express : routes REST, middlewares, gestion d’erreurs,
+            CORS et appels front avec Fetch pour comprendre le cycle complet requête/réponse.
+          </p>
+          <div class="experience-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">API</span>
+          </div>
+          <span class="resource-link">🔒 Local only – environnement d’entraînement</span>
+        </article>
+
+        <!-- Exercices TypeScript -->
+        <article class="resource-card" data-tech="typescript">
+          <h4>Exercices TypeScript</h4>
+          <p>
+            Série d’exercices pour maîtriser les types, interfaces, generics et classes.
+            Focalisé sur la robustesse du code et la lisibilité long terme.
+          </p>
+          <div class="experience-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Types</span>
+            <span class="tag">Generics</span>
+          </div>
+          <span class="resource-link">🔒 Local only – montée en compétences</span>
+        </article>
+
+        <!-- Exercices JavaScript -->
+        <article class="resource-card" data-tech="javascript">
+          <h4>Exercices JavaScript</h4>
+          <p>
+            Petits scripts pour travailler callbacks, fonctions anonymes, récursivité,
+            gestion d’array et manipulation du DOM sans dépendances externes.
+          </p>
           <div class="experience-tags">
             <span class="tag">JavaScript</span>
-            <span class="tag">Animations</span>
-            <span class="tag">UI</span>
+            <span class="tag">ES6+</span>
+            <span class="tag">Algorithmes</span>
           </div>
-          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-        </a>
-        <a class="resource-card" data-tech="web3" href="#" target="_blank" rel="noopener">
-          <h4>Dashboard on-chain</h4>
-          <p>Lecture de state on-chain, rafraichissement en direct et graphiques legers.</p>
-          <div class="experience-tags">
-            <span class="tag">Web3</span>
-            <span class="tag">ETH</span>
-            <span class="tag">Live</span>
-          </div>
-          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-        </a>
-        <a class="resource-card" data-tech="javascript" href="#" target="_blank" rel="noopener">
-          <h4>Micro-interactions UI</h4>
-          <p>Bibliotheque de hover, loaders et feedback instantanes pour UI modernes.</p>
-          <div class="experience-tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">UI</span>
-            <span class="tag">Motion</span>
-          </div>
-          <span class="resource-link">Voir la demo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-        </a>
+          <span class="resource-link">🔒 Local only – entraînement quotidien</span>
+        </article>
+
       </div>
     </section>
   </main>
